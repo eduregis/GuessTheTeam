@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E0A2CC225CAEC75006D6545 /* Player+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A2CBE25CAEC75006D6545 /* Player+CoreDataClass.swift */; };
+		2E0A2CC325CAEC75006D6545 /* Player+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A2CBF25CAEC75006D6545 /* Player+CoreDataProperties.swift */; };
+		2E0A2CC425CAEC75006D6545 /* Team+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A2CC025CAEC75006D6545 /* Team+CoreDataClass.swift */; };
+		2E0A2CC525CAEC75006D6545 /* Team+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A2CC125CAEC75006D6545 /* Team+CoreDataProperties.swift */; };
+		2E0A2CCC25CAECA1006D6545 /* GuessTheTeam.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 2EEE181B25CAE5E9003926DE /* GuessTheTeam.xcdatamodeld */; };
+		2E0A2CD125CAECC5006D6545 /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A2CD025CAECC5006D6545 /* DatabaseController.swift */; };
 		2EEE181325CAE5E9003926DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE181225CAE5E9003926DE /* AppDelegate.swift */; };
 		2EEE181525CAE5E9003926DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE181425CAE5E9003926DE /* SceneDelegate.swift */; };
 		2EEE181725CAE5E9003926DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE181625CAE5E9003926DE /* ViewController.swift */; };
-		2EEE181A25CAE5E9003926DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EEE181825CAE5E9003926DE /* Main.storyboard */; };
-		2EEE181D25CAE5E9003926DE /* GuessTheTeam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE181B25CAE5E9003926DE /* GuessTheTeam.xcdatamodeld */; };
 		2EEE181F25CAE5EA003926DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EEE181E25CAE5EA003926DE /* Assets.xcassets */; };
 		2EEE182225CAE5EA003926DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EEE182025CAE5EA003926DE /* LaunchScreen.storyboard */; };
 		2EEE182D25CAE5EA003926DE /* GuessTheTeamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE182C25CAE5EA003926DE /* GuessTheTeamTests.swift */; };
@@ -37,11 +41,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E0A2CBE25CAEC75006D6545 /* Player+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Player+CoreDataClass.swift"; path = "GuessTheTeam/Player+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2E0A2CBF25CAEC75006D6545 /* Player+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Player+CoreDataProperties.swift"; path = "GuessTheTeam/Player+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2E0A2CC025CAEC75006D6545 /* Team+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Team+CoreDataClass.swift"; path = "GuessTheTeam/Team+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2E0A2CC125CAEC75006D6545 /* Team+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Team+CoreDataProperties.swift"; path = "GuessTheTeam/Team+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2E0A2CD025CAECC5006D6545 /* DatabaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
 		2EEE180F25CAE5E9003926DE /* GuessTheTeam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessTheTeam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EEE181225CAE5E9003926DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EEE181425CAE5E9003926DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2EEE181625CAE5E9003926DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2EEE181925CAE5E9003926DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2EEE181C25CAE5E9003926DE /* GuessTheTeam.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GuessTheTeam.xcdatamodel; sourceTree = "<group>"; };
 		2EEE181E25CAE5EA003926DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2EEE182125CAE5EA003926DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -83,6 +91,10 @@
 		2EEE180625CAE5E9003926DE = {
 			isa = PBXGroup;
 			children = (
+				2E0A2CBE25CAEC75006D6545 /* Player+CoreDataClass.swift */,
+				2E0A2CBF25CAEC75006D6545 /* Player+CoreDataProperties.swift */,
+				2E0A2CC025CAEC75006D6545 /* Team+CoreDataClass.swift */,
+				2E0A2CC125CAEC75006D6545 /* Team+CoreDataProperties.swift */,
 				2EEE181125CAE5E9003926DE /* GuessTheTeam */,
 				2EEE182B25CAE5EA003926DE /* GuessTheTeamTests */,
 				2EEE183625CAE5EA003926DE /* GuessTheTeamUITests */,
@@ -107,10 +119,10 @@
 				2EEE181225CAE5E9003926DE /* AppDelegate.swift */,
 				2EEE181425CAE5E9003926DE /* SceneDelegate.swift */,
 				2EEE181625CAE5E9003926DE /* ViewController.swift */,
-				2EEE181825CAE5E9003926DE /* Main.storyboard */,
 				2EEE182025CAE5EA003926DE /* LaunchScreen.storyboard */,
 				2EEE182325CAE5EA003926DE /* Info.plist */,
 				2EEE181B25CAE5E9003926DE /* GuessTheTeam.xcdatamodeld */,
+				2E0A2CD025CAECC5006D6545 /* DatabaseController.swift */,
 			);
 			path = GuessTheTeam;
 			sourceTree = "<group>";
@@ -245,9 +257,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E0A2CCC25CAECA1006D6545 /* GuessTheTeam.xcdatamodeld in Resources */,
 				2EEE182225CAE5EA003926DE /* LaunchScreen.storyboard in Resources */,
 				2EEE181F25CAE5EA003926DE /* Assets.xcassets in Resources */,
-				2EEE181A25CAE5E9003926DE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,10 +284,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EEE181D25CAE5E9003926DE /* GuessTheTeam.xcdatamodeld in Sources */,
+				2E0A2CC225CAEC75006D6545 /* Player+CoreDataClass.swift in Sources */,
 				2EEE184D25CAE872003926DE /* CustomColors.swift in Sources */,
+				2E0A2CC525CAEC75006D6545 /* Team+CoreDataProperties.swift in Sources */,
+				2E0A2CC325CAEC75006D6545 /* Player+CoreDataProperties.swift in Sources */,
 				2EEE181725CAE5E9003926DE /* ViewController.swift in Sources */,
+				2E0A2CD125CAECC5006D6545 /* DatabaseController.swift in Sources */,
 				2EEE181325CAE5E9003926DE /* AppDelegate.swift in Sources */,
+				2E0A2CC425CAEC75006D6545 /* Team+CoreDataClass.swift in Sources */,
 				2EEE181525CAE5E9003926DE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,14 +328,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2EEE181825CAE5E9003926DE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2EEE181925CAE5E9003926DE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2EEE182025CAE5EA003926DE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

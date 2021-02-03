@@ -12,7 +12,7 @@
         <relationship name="players" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Player" inverseName="team" inverseEntity="Player"/>
     </entity>
     <elements>
-        <element name="Team" positionX="-63" positionY="-18" width="128" height="73"/>
         <element name="Player" positionX="-54" positionY="0" width="128" height="118"/>
+        <element name="Team" positionX="-63" positionY="-18" width="128" height="73"/>
     </elements>
 </model>
