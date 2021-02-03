@@ -1,0 +1,73 @@
+[
+    {
+        "name": "Manchester United",
+        "players": [
+            {
+                "name": "Henderson",
+                "function": "GoalKeeper",
+                "club": "Manchester United",
+                "nationality": "England"
+            },
+            {
+                "name": "Maguire",
+                "function": "Left Back",
+                "club": "Manchester United",
+                "nationality": "England"
+            },
+            {
+                "name": "Bailly",
+                "function": "Right Back",
+                "club": "Manchester United",
+                "nationality": "Ivory Coast"
+            },
+            {
+                "name": "Alex Telles",
+                "function": "Left WingBack",
+                "club": "Manchester United",
+                "nationality": "Brazil"
+            },
+            {
+                "name": "Wan-Bissaka",
+                "function": "Left WingBack",
+                "club": "Manchester United",
+                "nationality": "England"
+            },
+            {
+                "name": "Van De Beek",
+                "function": "LeftCenter Midfielder",
+                "club": "Manchester United",
+                "nationality": "Netherlands"
+            },
+            {
+                "name": "Pogba",
+                "function": "RightCenter Midfielder",
+                "club": "Manchester United",
+                "nationality": "France"
+            },
+            {
+                "name": "Martial",
+                "function": "Left Wing",
+                "club": "Manchester United",
+                "nationality": "France"
+            },
+            {
+                "name": "Rashford",
+                "function": "Right Wing",
+                "club": "Manchester United",
+                "nationality": "England"
+            },
+            {
+                "name": "B. Fernandes",
+                "function": "Second Striker",
+                "club": "Manchester United",
+                "nationality": "Portugal"
+            },
+            {
+                "name": "Cavani",
+                "function": "Striker",
+                "club": "Manchester United",
+                "nationality": "Uruguay"
+            }
+        ]
+    }
+]

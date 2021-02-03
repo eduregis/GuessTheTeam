@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
            window = UIWindow(frame: windowScene.coordinateSpace.bounds)
            window?.windowScene = windowScene
            // Aqui passamos qual será a controller principal.
-           window?.rootViewController = ViewController()
+           window?.rootViewController = FieldController()
            window?.makeKeyAndVisible()
 
     }
