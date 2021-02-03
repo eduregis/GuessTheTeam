@@ -16,6 +16,7 @@
 		2EEE182225CAE5EA003926DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EEE182025CAE5EA003926DE /* LaunchScreen.storyboard */; };
 		2EEE182D25CAE5EA003926DE /* GuessTheTeamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE182C25CAE5EA003926DE /* GuessTheTeamTests.swift */; };
 		2EEE183825CAE5EA003926DE /* GuessTheTeamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE183725CAE5EA003926DE /* GuessTheTeamUITests.swift */; };
+		2EEE184D25CAE872003926DE /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE184C25CAE872003926DE /* CustomColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		2EEE183325CAE5EA003926DE /* GuessTheTeamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuessTheTeamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EEE183725CAE5EA003926DE /* GuessTheTeamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheTeamUITests.swift; sourceTree = "<group>"; };
 		2EEE183925CAE5EA003926DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EEE184C25CAE872003926DE /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +103,11 @@
 		2EEE181125CAE5E9003926DE /* GuessTheTeam */ = {
 			isa = PBXGroup;
 			children = (
+				2EEE184B25CAE861003926DE /* Assets */,
 				2EEE181225CAE5E9003926DE /* AppDelegate.swift */,
 				2EEE181425CAE5E9003926DE /* SceneDelegate.swift */,
 				2EEE181625CAE5E9003926DE /* ViewController.swift */,
 				2EEE181825CAE5E9003926DE /* Main.storyboard */,
-				2EEE181E25CAE5EA003926DE /* Assets.xcassets */,
 				2EEE182025CAE5EA003926DE /* LaunchScreen.storyboard */,
 				2EEE182325CAE5EA003926DE /* Info.plist */,
 				2EEE181B25CAE5E9003926DE /* GuessTheTeam.xcdatamodeld */,
@@ -129,6 +131,15 @@
 				2EEE183925CAE5EA003926DE /* Info.plist */,
 			);
 			path = GuessTheTeamUITests;
+			sourceTree = "<group>";
+		};
+		2EEE184B25CAE861003926DE /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				2EEE181E25CAE5EA003926DE /* Assets.xcassets */,
+				2EEE184C25CAE872003926DE /* CustomColors.swift */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EEE181D25CAE5E9003926DE /* GuessTheTeam.xcdatamodeld in Sources */,
+				2EEE184D25CAE872003926DE /* CustomColors.swift in Sources */,
 				2EEE181725CAE5E9003926DE /* ViewController.swift in Sources */,
 				2EEE181325CAE5E9003926DE /* AppDelegate.swift in Sources */,
 				2EEE181525CAE5E9003926DE /* SceneDelegate.swift in Sources */,
