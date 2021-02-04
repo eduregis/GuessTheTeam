@@ -34,6 +34,13 @@ class PlayerView: UIView {
         flagImage.image = UIImage(named: shieldOrFlag)
         playerNameLabel.text = playerName
         configureLayout()
+        self.isHidden = true
+    }
+    
+    func setPlayer(playerName: String, shieldOrFlag: String) {
+        flagImage.image = UIImage(named: shieldOrFlag)
+        playerNameLabel.text = playerName
+        self.isHidden = false
     }
     
     required init?(coder: NSCoder) {

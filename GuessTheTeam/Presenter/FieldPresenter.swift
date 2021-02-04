@@ -12,13 +12,13 @@ class FieldPresenter {
     @Published var apiData = [TeamData]()
     
     init() {
-//        loadTeams()
         removeAllTeams()
-        readTeams()
+        loadTeams()
+//        readTeams()
     }
     
     func loadTeams() {
-        UserDefaults.standard.bool(forKey: "isNotFirstTime")
+        print(UserDefaults.standard.bool(forKey: "isNotFirstTime"))
         if let fileLocation = Bundle.main.path(forResource: "api", ofType: "json") {
             do {
                 let url = URL(fileURLWithPath: fileLocation)
@@ -48,16 +48,32 @@ class FieldPresenter {
         }
     }
     
-    func readTeams() {
+    func readTeams() -> [Team] {
+        var teamList: [Team] = []
         do {
-            if let teams = try DatabaseController.persistentContainer.viewContext.fetch(Team.fetchRequest()) as? [Team] {
-                for team in teams {
-                    print(team.name)
-                }
+            let request = Team.fetchRequest() as NSFetchRequest<Team>
+            if let teams = try DatabaseController.persistentContainer.viewContext.fetch(request) as? [Team] {
+                teamList = teams
             }
         } catch {
             print("Erro no banco, não conseguiu realizar a busca")
         }
+        return teamList
+    }
+    
+    func fetchPlayersByClub(club: String) -> [Player] {
+        var playerList: [Player] = []
+        do {
+            let request = Player.fetchRequest() as NSFetchRequest<Player>
+            let pred =  NSPredicate(format: "club = %@", club)
+            request.predicate = pred
+            if let players = try DatabaseController.persistentContainer.viewContext.fetch(request) as? [Player] {
+                playerList = players
+            }
+        } catch {
+            print("Erro no banco, não conseguiu realizar a busca")
+        }
+        return playerList
     }
     
     func removeAllTeams() {
@@ -70,6 +86,50 @@ class FieldPresenter {
             }
         } catch {
             print("Erro no banco, não conseguiu realizar a busca")
+        }
+    }
+    
+    func setPlayersInField(field: FieldView, club: String) {
+        var players = fetchPlayersByClub(club: club)
+        
+        for player in players {
+            
+            if let name = player.name {
+                
+                if let nationality = player.nationality {
+                    
+                    switch player.function {
+                    case "GoalKeeper":
+                        field.goalkeeper.setPlayer(playerName: name, shieldOrFlag: nationality)
+                    case "Left Back":
+                        field.leftBack.setPlayer(playerName: name, shieldOrFlag: nationality)
+                    case "Center Back":
+                        field.leftBack.setPlayer(playerName: name, shieldOrFlag: nationality)
+                    case "Right Back":
+                        field.rightBack.setPlayer(playerName: name, shieldOrFlag: nationality)
+                    case "Left WingBack":
+                        field.leftWingBack.setPlayer(playerName: name, shieldOrFlag: nationality)
+                    case "Right WingBack":
+                        field.rightWingBack.setPlayer(playerName: name, shieldOrFlag: nationality)
+                    case "LeftCenter Midfielder":
+                        field.leftMidfielder.setPlayer(playerName: name, shieldOrFlag: nationality)
+                    case "RightCenter Midfielder":
+                        field.rightMidfielder.setPlayer(playerName: name, shieldOrFlag: nationality)
+                    case "Midfielder":
+                        field.midfielder.setPlayer(playerName: name, shieldOrFlag: nationality)
+                    case "Left Wing":
+                        field.leftWing.setPlayer(playerName: name, shieldOrFlag: nationality)
+                    case "Right Wing":
+                        field.rightWing.setPlayer(playerName: name, shieldOrFlag: nationality)
+                    case "Second Striker":
+                        field.secondStriker.setPlayer(playerName: name, shieldOrFlag: nationality)
+                    case "Striker":
+                        field.striker.setPlayer(playerName: name, shieldOrFlag: nationality)
+                    default:
+                        break
+                    }
+                }
+            }
         }
     }
 }

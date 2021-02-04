@@ -18,6 +18,7 @@
 		2E0A2CF125CB2E5E006D6545 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A2CF025CB2E5E006D6545 /* PlayerView.swift */; };
 		2E0A2CF625CB543F006D6545 /* DataCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A2CF525CB543F006D6545 /* DataCodable.swift */; };
 		2E0A2D0D25CB5F11006D6545 /* api.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E0A2D0C25CB5F11006D6545 /* api.json */; };
+		2E0A2D3025CC28E4006D6545 /* Righteous-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E0A2D2F25CC28E4006D6545 /* Righteous-Regular.ttf */; };
 		2EEE181325CAE5E9003926DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE181225CAE5E9003926DE /* AppDelegate.swift */; };
 		2EEE181525CAE5E9003926DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE181425CAE5E9003926DE /* SceneDelegate.swift */; };
 		2EEE181725CAE5E9003926DE /* FieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE181625CAE5E9003926DE /* FieldController.swift */; };
@@ -56,6 +57,8 @@
 		2E0A2CF025CB2E5E006D6545 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		2E0A2CF525CB543F006D6545 /* DataCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCodable.swift; sourceTree = "<group>"; };
 		2E0A2D0C25CB5F11006D6545 /* api.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = api.json; sourceTree = "<group>"; };
+		2E0A2D1925CC2341006D6545 /* Righteous-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Righteous-Regular.ttf"; path = "../../../../Downloads/Righteous/Righteous-Regular.ttf"; sourceTree = "<group>"; };
+		2E0A2D2F25CC28E4006D6545 /* Righteous-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Righteous-Regular.ttf"; path = "../../../../Downloads/Righteous/Righteous-Regular.ttf"; sourceTree = "<group>"; };
 		2EEE180F25CAE5E9003926DE /* GuessTheTeam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessTheTeam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EEE181225CAE5E9003926DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EEE181425CAE5E9003926DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +149,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		2E0A2D1D25CC27B6006D6545 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2E0A2D2F25CC28E4006D6545 /* Righteous-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		2EEE180625CAE5E9003926DE = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +180,7 @@
 		2EEE181125CAE5E9003926DE /* GuessTheTeam */ = {
 			isa = PBXGroup;
 			children = (
+				2E0A2D1D25CC27B6006D6545 /* Fonts */,
 				2E0A2CDB25CB1B50006D6545 /* Database */,
 				2E0A2CDA25CB1B39006D6545 /* Presenter */,
 				2E0A2CD925CB1B31006D6545 /* View */,
@@ -203,6 +215,7 @@
 		2EEE184B25CAE861003926DE /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				2E0A2D1925CC2341006D6545 /* Righteous-Regular.ttf */,
 				2EEE181E25CAE5EA003926DE /* Assets.xcassets */,
 				2EEE184C25CAE872003926DE /* CustomColors.swift */,
 			);
@@ -314,6 +327,7 @@
 			files = (
 				2E0A2CCC25CAECA1006D6545 /* GuessTheTeam.xcdatamodeld in Resources */,
 				2EEE182225CAE5EA003926DE /* LaunchScreen.storyboard in Resources */,
+				2E0A2D3025CC28E4006D6545 /* Righteous-Regular.ttf in Resources */,
 				2E0A2D0D25CB5F11006D6545 /* api.json in Resources */,
 				2EEE181F25CAE5EA003926DE /* Assets.xcassets in Resources */,
 			);

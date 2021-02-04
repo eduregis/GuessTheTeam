@@ -124,6 +124,22 @@ class FieldView: UIView {
         return player
     }()
     
+    lazy var leftCenterForward: PlayerView = {
+        let player = PlayerView()
+        player.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(player)
+        team.append(player)
+        return player
+    }()
+    
+    lazy var rightCenterForward: PlayerView = {
+        let player = PlayerView()
+        player.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(player)
+        team.append(player)
+        return player
+    }()
+    
     init() {
         super.init(frame: .zero)
         fieldImage.image = UIImage(named: "field")
@@ -143,43 +159,49 @@ class FieldView: UIView {
             fieldImage.heightAnchor.constraint(equalTo: self.heightAnchor),
             
             goalkeeper.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            goalkeeper.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 30),
+            goalkeeper.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 50),
             
             centerBack.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            centerBack.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -50),
+            centerBack.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -30),
             
             leftBack.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: -60),
-            leftBack.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -60),
+            leftBack.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -30),
             
             rightBack.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 60),
-            rightBack.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -60),
+            rightBack.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -30),
             
             leftWingBack.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: -120),
-            leftWingBack.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -80),
+            leftWingBack.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -50),
             
             rightWingBack.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 120),
-            rightWingBack.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -80),
+            rightWingBack.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -50),
             
             leftMidfielder.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: -60),
-            leftMidfielder.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -140),
+            leftMidfielder.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -110),
             
             rightMidfielder.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 60),
-            rightMidfielder.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -140),
+            rightMidfielder.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -110),
             
             midfielder.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            midfielder.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -135),
+            midfielder.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -105),
             
             leftWing.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: -80),
-            leftWing.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -220),
+            leftWing.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -210),
             
             rightWing.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 80),
-            rightWing.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -220),
+            rightWing.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -210),
             
             striker.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            striker.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -255),
+            striker.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -235),
             
             secondStriker.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            secondStriker.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -200),
+            secondStriker.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -180),
+            
+            leftCenterForward.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: -40),
+            leftCenterForward.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -225),
+            
+            rightCenterForward.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 40),
+            rightCenterForward.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -225),
         ])
     }
 }
