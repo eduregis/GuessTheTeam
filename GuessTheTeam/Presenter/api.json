@@ -1,0 +1,144 @@
+[
+    {
+        "name": "Manchester United",
+        "players": [
+            {
+                "name": "Henderson",
+                "function": "GoalKeeper",
+                "club": "Manchester United",
+                "nationality": "england"
+            },
+            {
+                "name": "Maguire",
+                "function": "Left Back",
+                "club": "Manchester United",
+                "nationality": "england"
+            },
+            {
+                "name": "Bailly",
+                "function": "Right Back",
+                "club": "Manchester United",
+                "nationality": "ivory-coast"
+            },
+            {
+                "name": "Alex Telles",
+                "function": "Left WingBack",
+                "club": "Manchester United",
+                "nationality": "brazil"
+            },
+            {
+                "name": "Wan-Bissaka",
+                "function": "Right WingBack",
+                "club": "Manchester United",
+                "nationality": "england"
+            },
+            {
+                "name": "Van De Beek",
+                "function": "LeftCenter Midfielder",
+                "club": "Manchester United",
+                "nationality": "netherlands"
+            },
+            {
+                "name": "Pogba",
+                "function": "RightCenter Midfielder",
+                "club": "Manchester United",
+                "nationality": "france"
+            },
+            {
+                "name": "Martial",
+                "function": "Left Wing",
+                "club": "Manchester United",
+                "nationality": "france"
+            },
+            {
+                "name": "Rashford",
+                "function": "Right Wing",
+                "club": "Manchester United",
+                "nationality": "england"
+            },
+            {
+                "name": "B. Fernandes",
+                "function": "Second Striker",
+                "club": "Manchester United",
+                "nationality": "portugal"
+            },
+            {
+                "name": "Cavani",
+                "function": "Striker",
+                "club": "Manchester United",
+                "nationality": "uruguay"
+            }
+        ]
+    },
+    {
+        "name": "Juventus",
+        "players": [
+            {
+                "name": "Szczesny",
+                "function": "GoalKeeper",
+                "club": "Juventus",
+                "nationality": "republic-of-poland"
+            },
+            {
+                "name": "De ligt",
+                "function": "Left Back",
+                "club": "Juventus",
+                "nationality": "netherlands"
+            },
+            {
+                "name": "Bonucci",
+                "function": "Right Back",
+                "club": "Juventus",
+                "nationality": "italy"
+            },
+            {
+                "name": "Danilo",
+                "function": "Left WingBack",
+                "club": "Juventus",
+                "nationality": "brazil"
+            },
+            {
+                "name": "Cuadrado",
+                "function": "Right WingBack",
+                "club": "Juventus",
+                "nationality": "colombia"
+            },
+            {
+                "name": "Rabiot",
+                "function": "LeftCenter Midfielder",
+                "club": "Juventus",
+                "nationality": "france"
+            },
+            {
+                "name": "McKennie",
+                "function": "RightCenter Midfielder",
+                "club": "Juventus",
+                "nationality": "united-states-of-america"
+            },
+            {
+                "name": "Arthur",
+                "function": "Midfielder",
+                "club": "Juventus",
+                "nationality": "brazil"
+            },
+            {
+                "name": "C. Ronaldo",
+                "function": "Left Wing",
+                "club": "Juventus",
+                "nationality": "portugal"
+            },
+            {
+                "name": "Morata",
+                "function": "Right Wing",
+                "club": "Juventus",
+                "nationality": "spain"
+            },
+            {
+                "name": "Dybala",
+                "function": "Second Striker",
+                "club": "Juventus",
+                "nationality": "argentina"
+            }
+        ]
+    }
+]
