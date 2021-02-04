@@ -12,8 +12,8 @@ class FieldPresenter {
     @Published var apiData = [TeamData]()
     
     init() {
-        removeAllTeams()
-        loadTeams()
+//        removeAllTeams()
+//        loadTeams()
 //        readTeams()
     }
     
@@ -86,6 +86,18 @@ class FieldPresenter {
             }
         } catch {
             print("Erro no banco, não conseguiu realizar a busca")
+        }
+    }
+    
+    func showNamesinField(field: FieldView) {
+        for player in field.team {
+            player.playerNameLabel.isHidden = false
+        }
+    }
+    
+    func hideNamesinField(field: FieldView) {
+        for player in field.team {
+            player.playerNameLabel.isHidden = true
         }
     }
     

@@ -29,10 +29,14 @@ class PlayerView: UIView {
         return label
     }()
     
-    init(playerName: String = "Neymar", shieldOrFlag: String = "brazil") {
+    init(playerName: String? = nil, shieldOrFlag: String? = nil) {
         super.init(frame: .zero)
-        flagImage.image = UIImage(named: shieldOrFlag)
-        playerNameLabel.text = playerName
+        if let shieldOrFlag = shieldOrFlag {
+            flagImage.image = UIImage(named: shieldOrFlag)
+        }
+        if let playerName = playerName {
+            playerNameLabel.text = playerName
+        }
         configureLayout()
         self.isHidden = true
     }
@@ -40,6 +44,7 @@ class PlayerView: UIView {
     func setPlayer(playerName: String, shieldOrFlag: String) {
         flagImage.image = UIImage(named: shieldOrFlag)
         playerNameLabel.text = playerName
+        playerNameLabel.isHidden = true
         self.isHidden = false
     }
     
