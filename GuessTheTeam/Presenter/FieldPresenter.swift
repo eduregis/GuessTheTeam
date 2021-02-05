@@ -12,9 +12,9 @@ class FieldPresenter {
     @Published var apiData = [TeamData]()
     
     init() {
-//        removeAllTeams()
-//        loadTeams()
-//        readTeams()
+        removeAllTeams()
+        loadTeams()
+        readTeams()
     }
     
     func loadTeams() {
@@ -95,9 +95,9 @@ class FieldPresenter {
         }
     }
     
-    func hideNamesinField(field: FieldView) {
+    func hidePlayersinField(field: FieldView) {
         for player in field.team {
-            player.playerNameLabel.isHidden = true
+            player.isHidden = true
         }
     }
     

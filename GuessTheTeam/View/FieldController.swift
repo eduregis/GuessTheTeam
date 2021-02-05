@@ -12,7 +12,7 @@ class FieldController: UIViewController {
 
     private let fieldPresenter: FieldPresenter
     var teams: [Team] = []
-    var team_index = 1
+    var team_index = 0
     var timer: Timer = Timer()
     var count: Int = 0
     var timerCounting: Bool = false
@@ -23,6 +23,7 @@ class FieldController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         configureLayout()
         self.view.backgroundColor = UIColor.backgroundPurple
+        self.hideKeyboardWhenTappedAround() 
         teams = fieldPresenter.readTeams()
         print(teams[team_index].name!)
     }
@@ -117,9 +118,37 @@ class FieldController: UIViewController {
         return button
     }()
     
+    lazy var feedbackBar: FeedbackBar = {
+        let feedbackBar = FeedbackBar()
+        feedbackBar.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(feedbackBar)
+        return feedbackBar
+    }()
+    
     @objc func mainButton() {
+        if nextTeamAvailable {
+            fieldPresenter.hidePlayersinField(field: fieldView)
+            team_index += 1
+            teams = fieldPresenter.readTeams()
+            print(teams[team_index].name!)
+            teamName.isHidden = true
+            nextTeamAvailable = false
+            teamName.textColor = .actionBlue
+            customButton.backgroundColor = .actionBlue
+            timerView.layer.opacity = 1
+        }
         if !(timerCounting) {
             fieldPresenter.setPlayersInField(field: fieldView, club: teams[team_index].name!)
+            UIView.animate(withDuration: 0.4, delay: 0, options:[.curveEaseIn], animations: {
+                self.feedbackBar.spheres[self.team_index].transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+                self.feedbackBar.spheres[self.team_index].sphere.backgroundColor = .actionBlue
+            })
+            
+            if self.team_index > 0 {
+                UIView.animate(withDuration: 0.4, delay: 0, options:[.curveEaseIn], animations: {
+                    self.feedbackBar.spheres[self.team_index - 1].transform = CGAffineTransform(scaleX: 1, y: 1)
+                })
+            }
             teamName.text = teams[team_index].name!
             timerCounting = true
             timerView.isHidden = false
@@ -137,11 +166,14 @@ class FieldController: UIViewController {
     }
     
     @objc func confirmName() {
-        if textField.text?.lowercased() == teams[team_index].name!.lowercased() {
+        if textField.text?.lowercased().trimmingCharacters(in: .whitespaces) == teams[team_index].name!.lowercased().trimmingCharacters(in: .whitespaces) {
             textField.layer.borderColor = UIColor.actionGreen.cgColor
             textField.textColor = .actionGreen
             textField.tintColor = .actionGreen
             confirmButton.backgroundColor = .actionGreen
+            teamName.textColor = .actionGreen
+            customButton.backgroundColor = .actionGreen
+            self.feedbackBar.spheres[self.team_index].sphere.backgroundColor = .actionGreen
             dismissAlert()
             showInfo()
         } else {
@@ -162,6 +194,10 @@ class FieldController: UIViewController {
             timerView.text = timeString
         } else {
             showInfo()
+            teamName.textColor = .actionRed
+            customButton.backgroundColor = .actionRed
+            dismissAlert()
+            self.feedbackBar.spheres[self.team_index].sphere.backgroundColor = .actionRed
             timerView.text = "       0:00"
         }
     }
@@ -171,7 +207,13 @@ class FieldController: UIViewController {
             self.dimmingOverlay.layer.opacity = 0
             self.textField.layer.opacity = 0
             self.confirmButton.layer.opacity = 0
-        })
+        }){ _ in
+            self.textField.text = ""
+            self.textField.layer.borderColor = UIColor.actionBlue.cgColor
+            self.textField.textColor = .actionBlue
+            self.textField.tintColor = .actionBlue
+            self.confirmButton.backgroundColor = .actionBlue
+        }
     }
     
     func showInfo() {
@@ -179,7 +221,9 @@ class FieldController: UIViewController {
         timer.invalidate()
         teamName.isHidden = false
         fieldPresenter.showNamesinField(field: fieldView)
-        
+        nextTeamAvailable = true
+        timerView.layer.opacity = 0.6
+        customButton.setTitle("Próximo", for: .normal)
     }
     
     func secondsToMinutedSeconds(seconds: Int) -> (Int, Int) {
@@ -202,10 +246,10 @@ class FieldController: UIViewController {
             timerView.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.3),
             timerView.heightAnchor.constraint(equalToConstant: 59),
             
-            teamName.topAnchor.constraint(equalTo: timerView.bottomAnchor, constant: 13),
+            teamName.topAnchor.constraint(equalTo: timerView.bottomAnchor, constant: 23),
             teamName.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             
-            fieldView.topAnchor.constraint(equalTo: timerView.bottomAnchor, constant: 60),
+            fieldView.topAnchor.constraint(equalTo: timerView.bottomAnchor, constant: 80),
             fieldView.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 16),
             fieldView.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -16),
             
@@ -213,6 +257,9 @@ class FieldController: UIViewController {
             customButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             customButton.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.6),
             customButton.heightAnchor.constraint(equalToConstant: 59),
+            
+            feedbackBar.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            feedbackBar.topAnchor.constraint(equalTo: customButton.bottomAnchor, constant: 30),
             
             dimmingOverlay.leftAnchor.constraint(equalTo: self.view.leftAnchor),
             dimmingOverlay.rightAnchor.constraint(equalTo: self.view.rightAnchor),
@@ -227,7 +274,8 @@ class FieldController: UIViewController {
             confirmButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             confirmButton.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: 20),
             confirmButton.widthAnchor.constraint(equalToConstant: 50),
-            confirmButton.heightAnchor.constraint(equalToConstant: 50)
+            confirmButton.heightAnchor.constraint(equalToConstant: 50),
+            
         ])
     }
 }
