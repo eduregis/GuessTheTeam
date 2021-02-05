@@ -19,6 +19,10 @@
 		2E0A2CF625CB543F006D6545 /* DataCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A2CF525CB543F006D6545 /* DataCodable.swift */; };
 		2E0A2D0D25CB5F11006D6545 /* api.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E0A2D0C25CB5F11006D6545 /* api.json */; };
 		2E0A2D3025CC28E4006D6545 /* Righteous-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E0A2D2F25CC28E4006D6545 /* Righteous-Regular.ttf */; };
+		2E0A2D3C25CC712E006D6545 /* ShakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A2D3B25CC712E006D6545 /* ShakeView.swift */; };
+		2E0A2D4425CC7F3E006D6545 /* DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A2D4325CC7F3E006D6545 /* DismissKeyboard.swift */; };
+		2E0A2D4925CCA128006D6545 /* FeedbackBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A2D4825CCA128006D6545 /* FeedbackBar.swift */; };
+		2E0A2D5425CCA399006D6545 /* FeedbackSphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A2D5325CCA399006D6545 /* FeedbackSphere.swift */; };
 		2EEE181325CAE5E9003926DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE181225CAE5E9003926DE /* AppDelegate.swift */; };
 		2EEE181525CAE5E9003926DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE181425CAE5E9003926DE /* SceneDelegate.swift */; };
 		2EEE181725CAE5E9003926DE /* FieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE181625CAE5E9003926DE /* FieldController.swift */; };
@@ -59,6 +63,10 @@
 		2E0A2D0C25CB5F11006D6545 /* api.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = api.json; sourceTree = "<group>"; };
 		2E0A2D1925CC2341006D6545 /* Righteous-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Righteous-Regular.ttf"; path = "../../../../Downloads/Righteous/Righteous-Regular.ttf"; sourceTree = "<group>"; };
 		2E0A2D2F25CC28E4006D6545 /* Righteous-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Righteous-Regular.ttf"; path = "../../../../Downloads/Righteous/Righteous-Regular.ttf"; sourceTree = "<group>"; };
+		2E0A2D3B25CC712E006D6545 /* ShakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeView.swift; sourceTree = "<group>"; };
+		2E0A2D4325CC7F3E006D6545 /* DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboard.swift; sourceTree = "<group>"; };
+		2E0A2D4825CCA128006D6545 /* FeedbackBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackBar.swift; sourceTree = "<group>"; };
+		2E0A2D5325CCA399006D6545 /* FeedbackSphere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackSphere.swift; sourceTree = "<group>"; };
 		2EEE180F25CAE5E9003926DE /* GuessTheTeam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessTheTeam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EEE181225CAE5E9003926DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EEE181425CAE5E9003926DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +153,8 @@
 			children = (
 				2E0A2CE825CB2835006D6545 /* FieldView.swift */,
 				2E0A2CF025CB2E5E006D6545 /* PlayerView.swift */,
+				2E0A2D4825CCA128006D6545 /* FeedbackBar.swift */,
+				2E0A2D5325CCA399006D6545 /* FeedbackSphere.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -155,6 +165,16 @@
 				2E0A2D2F25CC28E4006D6545 /* Righteous-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		2E0A2D3A25CC711A006D6545 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2EEE184C25CAE872003926DE /* CustomColors.swift */,
+				2E0A2D3B25CC712E006D6545 /* ShakeView.swift */,
+				2E0A2D4325CC7F3E006D6545 /* DismissKeyboard.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		2EEE180625CAE5E9003926DE = {
@@ -180,6 +200,7 @@
 		2EEE181125CAE5E9003926DE /* GuessTheTeam */ = {
 			isa = PBXGroup;
 			children = (
+				2E0A2D3A25CC711A006D6545 /* Extensions */,
 				2E0A2D1D25CC27B6006D6545 /* Fonts */,
 				2E0A2CDB25CB1B50006D6545 /* Database */,
 				2E0A2CDA25CB1B39006D6545 /* Presenter */,
@@ -217,7 +238,6 @@
 			children = (
 				2E0A2D1925CC2341006D6545 /* Righteous-Regular.ttf */,
 				2EEE181E25CAE5EA003926DE /* Assets.xcassets */,
-				2EEE184C25CAE872003926DE /* CustomColors.swift */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -357,8 +377,10 @@
 				2E0A2CC225CAEC75006D6545 /* Player+CoreDataClass.swift in Sources */,
 				2EEE184D25CAE872003926DE /* CustomColors.swift in Sources */,
 				2E0A2CC525CAEC75006D6545 /* Team+CoreDataProperties.swift in Sources */,
+				2E0A2D3C25CC712E006D6545 /* ShakeView.swift in Sources */,
 				2E0A2CF125CB2E5E006D6545 /* PlayerView.swift in Sources */,
 				2E0A2CC325CAEC75006D6545 /* Player+CoreDataProperties.swift in Sources */,
+				2E0A2D4925CCA128006D6545 /* FeedbackBar.swift in Sources */,
 				2EEE181725CAE5E9003926DE /* FieldController.swift in Sources */,
 				2E0A2CD125CAECC5006D6545 /* DatabaseController.swift in Sources */,
 				2EEE181325CAE5E9003926DE /* AppDelegate.swift in Sources */,
@@ -366,7 +388,9 @@
 				2E0A2CE025CB1C12006D6545 /* FieldPresenter.swift in Sources */,
 				2E0A2CC425CAEC75006D6545 /* Team+CoreDataClass.swift in Sources */,
 				2EEE181525CAE5E9003926DE /* SceneDelegate.swift in Sources */,
+				2E0A2D5425CCA399006D6545 /* FeedbackSphere.swift in Sources */,
 				2E0A2CE925CB2835006D6545 /* FieldView.swift in Sources */,
+				2E0A2D4425CC7F3E006D6545 /* DismissKeyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

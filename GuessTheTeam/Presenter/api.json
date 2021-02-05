@@ -1,5 +1,218 @@
 [
     {
+        "name": "Barcelona",
+        "players": [
+            {
+                "name": "Ter Stegen",
+                "function": "GoalKeeper",
+                "club": "Barcelona",
+                "nationality": "germany"
+            },
+            {
+                "name": "Lenglet",
+                "function": "Left Back",
+                "club": "Barcelona",
+                "nationality": "france"
+            },
+            {
+                "name": "Pique",
+                "function": "Right Back",
+                "club": "Barcelona",
+                "nationality": "spain"
+            },
+            {
+                "name": "Alba",
+                "function": "Left WingBack",
+                "club": "Barcelona",
+                "nationality": "spain"
+            },
+            {
+                "name": "Dest",
+                "function": "Right WingBack",
+                "club": "Barcelona",
+                "nationality": "united-states-of-america"
+            },
+            {
+                "name": "De Jong",
+                "function": "LeftCenter Midfielder",
+                "club": "Barcelona",
+                "nationality": "netherlands"
+            },
+            {
+                "name": "Pjanic",
+                "function": "RightCenter Midfielder",
+                "club": "Barcelona",
+                "nationality": "bosnia-and-herzegovina"
+            },
+            {
+                "name": "Busquets",
+                "function": "Midfielder",
+                "club": "Barcelona",
+                "nationality": "spain"
+            },
+            {
+                "name": "Griezmann",
+                "function": "Left Wing",
+                "club": "Barcelona",
+                "nationality": "france"
+            },
+            {
+                "name": "Dembele",
+                "function": "Right Wing",
+                "club": "Barcelona",
+                "nationality": "france"
+            },
+            {
+                "name": "Messi",
+                "function": "Striker",
+                "club": "Barcelona",
+                "nationality": "argentina"
+            }
+        ]
+    },
+    {
+        "name": "Paris Saint-Germain",
+        "players": [
+            {
+                "name": "K. Navas",
+                "function": "GoalKeeper",
+                "club": "Paris Saint-Germain",
+                "nationality": "costa-rica"
+            },
+            {
+                "name": "Kimpembe",
+                "function": "Left Back",
+                "club": "Paris Saint-Germain",
+                "nationality": "france"
+            },
+            {
+                "name": "Marquinhos",
+                "function": "Right Back",
+                "club": "Paris Saint-Germain",
+                "nationality": "brazil"
+            },
+            {
+                "name": "Kurzawa",
+                "function": "Left WingBack",
+                "club": "Paris Saint-Germain",
+                "nationality": "france"
+            },
+            {
+                "name": "Florenzi",
+                "function": "Right WingBack",
+                "club": "Paris Saint-Germain",
+                "nationality": "italy"
+            },
+            {
+                "name": "Gueye",
+                "function": "LeftCenter Midfielder",
+                "club": "Paris Saint-Germain",
+                "nationality": "ghana"
+            },
+            {
+                "name": "Verratti",
+                "function": "RightCenter Midfielder",
+                "club": "Paris Saint-Germain",
+                "nationality": "italy"
+            },
+            {
+                "name": "Neymar",
+                "function": "Second Striker",
+                "club": "Paris Saint-Germain",
+                "nationality": "brazil"
+            },
+            {
+                "name": "Mbappe",
+                "function": "Left Wing",
+                "club": "Paris Saint-Germain",
+                "nationality": "france"
+            },
+            {
+                "name": "Di Maria",
+                "function": "Right Wing",
+                "club": "Paris Saint-Germain",
+                "nationality": "argentina"
+            },
+            {
+                "name": "Icardi",
+                "function": "Striker",
+                "club": "Paris Saint-Germain",
+                "nationality": "argentina"
+            }
+        ]
+    },
+    {
+        "name": "Manchester City",
+        "players": [
+            {
+                "name": "Ederson",
+                "function": "GoalKeeper",
+                "club": "Manchester City",
+                "nationality": "brazil"
+            },
+            {
+                "name": "Laporte",
+                "function": "Left Back",
+                "club": "Manchester City",
+                "nationality": "france"
+            },
+            {
+                "name": "Dias",
+                "function": "Right Back",
+                "club": "Manchester City",
+                "nationality": "portugal"
+            },
+            {
+                "name": "Cancelo",
+                "function": "Left WingBack",
+                "club": "Manchester City",
+                "nationality": "portugal"
+            },
+            {
+                "name": "Walker",
+                "function": "Right WingBack",
+                "club": "Manchester City",
+                "nationality": "england"
+            },
+            {
+                "name": "Gundogan",
+                "function": "LeftCenter Midfielder",
+                "club": "Manchester City",
+                "nationality": "germany"
+            },
+            {
+                "name": "Rodri",
+                "function": "Midfielder",
+                "club": "Manchester City",
+                "nationality": "spain"
+            },
+            {
+                "name": "De Bruyne",
+                "function": "RightCenter Midfielder",
+                "club": "Manchester City",
+                "nationality": "belgium"
+            },
+            {
+                "name": "Sterling",
+                "function": "Left Wing",
+                "club": "Manchester City",
+                "nationality": "england"
+            },
+            {
+                "name": "Mahrez",
+                "function": "Right Wing",
+                "club": "Manchester City",
+                "nationality": "algeria"
+            },
+            {
+                "name": "G. Jesus",
+                "function": "Striker",
+                "club": "Manchester City",
+                "nationality": "brazil"
+            }
+        ]
+    },
+    {
         "name": "Manchester United",
         "players": [
             {

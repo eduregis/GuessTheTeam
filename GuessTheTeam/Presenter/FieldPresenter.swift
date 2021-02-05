@@ -14,7 +14,7 @@ class FieldPresenter {
     init() {
         removeAllTeams()
         loadTeams()
-//        readTeams()
+        readTeams()
     }
     
     func loadTeams() {
@@ -86,6 +86,18 @@ class FieldPresenter {
             }
         } catch {
             print("Erro no banco, não conseguiu realizar a busca")
+        }
+    }
+    
+    func showNamesinField(field: FieldView) {
+        for player in field.team {
+            player.playerNameLabel.isHidden = false
+        }
+    }
+    
+    func hidePlayersinField(field: FieldView) {
+        for player in field.team {
+            player.isHidden = true
         }
     }
     
