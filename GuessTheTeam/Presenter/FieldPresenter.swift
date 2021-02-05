@@ -116,7 +116,7 @@ class FieldPresenter {
                     case "Left Back":
                         field.leftBack.setPlayer(playerName: name, shieldOrFlag: nationality)
                     case "Center Back":
-                        field.leftBack.setPlayer(playerName: name, shieldOrFlag: nationality)
+                        field.centerBack.setPlayer(playerName: name, shieldOrFlag: nationality)
                     case "Right Back":
                         field.rightBack.setPlayer(playerName: name, shieldOrFlag: nationality)
                     case "Left WingBack":
@@ -137,6 +137,10 @@ class FieldPresenter {
                         field.secondStriker.setPlayer(playerName: name, shieldOrFlag: nationality)
                     case "Striker":
                         field.striker.setPlayer(playerName: name, shieldOrFlag: nationality)
+                    case "LeftCenter Forward":
+                        field.leftCenterForward.setPlayer(playerName: name, shieldOrFlag: nationality)
+                    case "RightCenter Forward":
+                        field.rightCenterForward.setPlayer(playerName: name, shieldOrFlag: nationality)
                     default:
                         break
                     }

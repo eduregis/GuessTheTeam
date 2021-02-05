@@ -17,6 +17,8 @@ class FieldController: UIViewController {
     var count: Int = 0
     var timerCounting: Bool = false
     var nextTeamAvailable = false
+    var points = 0
+    var isLast = false
     
     init() {
         self.fieldPresenter = FieldPresenter()
@@ -25,7 +27,7 @@ class FieldController: UIViewController {
         self.view.backgroundColor = UIColor.backgroundPurple
         self.hideKeyboardWhenTappedAround() 
         teams = fieldPresenter.readTeams()
-        print(teams[team_index].name!)
+//        teams = teams.shuffled()
     }
     
     required init?(coder: NSCoder) {
@@ -126,42 +128,46 @@ class FieldController: UIViewController {
     }()
     
     @objc func mainButton() {
-        if nextTeamAvailable {
-            fieldPresenter.hidePlayersinField(field: fieldView)
-            team_index += 1
-            teams = fieldPresenter.readTeams()
-            print(teams[team_index].name!)
-            teamName.isHidden = true
-            nextTeamAvailable = false
-            teamName.textColor = .actionBlue
-            customButton.backgroundColor = .actionBlue
-            timerView.layer.opacity = 1
-        }
-        if !(timerCounting) {
-            fieldPresenter.setPlayersInField(field: fieldView, club: teams[team_index].name!)
-            UIView.animate(withDuration: 0.4, delay: 0, options:[.curveEaseIn], animations: {
-                self.feedbackBar.spheres[self.team_index].transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
-                self.feedbackBar.spheres[self.team_index].sphere.backgroundColor = .actionBlue
-            })
-            
-            if self.team_index > 0 {
+        if isLast {
+            // IR PARA A TELA DE CONCLUSÃO
+        } else {
+            if nextTeamAvailable {
+                fieldPresenter.hidePlayersinField(field: fieldView)
+                team_index += 1
+                teams = fieldPresenter.readTeams()
+                print(teams[team_index].name!)
+                teamName.isHidden = true
+                nextTeamAvailable = false
+                teamName.textColor = .actionBlue
+                customButton.backgroundColor = .actionBlue
+                timerView.layer.opacity = 1
+            }
+            if !(timerCounting) {
+                fieldPresenter.setPlayersInField(field: fieldView, club: teams[team_index].name!)
                 UIView.animate(withDuration: 0.4, delay: 0, options:[.curveEaseIn], animations: {
-                    self.feedbackBar.spheres[self.team_index - 1].transform = CGAffineTransform(scaleX: 1, y: 1)
+                    self.feedbackBar.spheres[self.team_index].transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+                    self.feedbackBar.spheres[self.team_index].sphere.backgroundColor = .actionBlue
+                })
+                
+                if self.team_index > 0 {
+                    UIView.animate(withDuration: 0.4, delay: 0, options:[.curveEaseIn], animations: {
+                        self.feedbackBar.spheres[self.team_index - 1].transform = CGAffineTransform(scaleX: 1, y: 1)
+                    })
+                }
+                teamName.text = teams[team_index].name!
+                timerCounting = true
+                timerView.isHidden = false
+                count = 45
+                timerView.text = "       0:\(count)"
+                timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
+                customButton.setTitle("Tentar", for: .normal)
+            } else {
+                UIView.animate(withDuration: 0.4, delay: 0, options:[.curveEaseInOut], animations: {
+                    self.dimmingOverlay.layer.opacity = 0.6
+                    self.textField.layer.opacity = 1
+                    self.confirmButton.layer.opacity = 1
                 })
             }
-            teamName.text = teams[team_index].name!
-            timerCounting = true
-            timerView.isHidden = false
-            count = 30
-            timerView.text = "       0:\(count)"
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
-            customButton.setTitle("Tentar", for: .normal)
-        } else {
-            UIView.animate(withDuration: 0.4, delay: 0, options:[.curveEaseInOut], animations: {
-                self.dimmingOverlay.layer.opacity = 0.6
-                self.textField.layer.opacity = 1
-                self.confirmButton.layer.opacity = 1
-            })
         }
     }
     
@@ -173,6 +179,7 @@ class FieldController: UIViewController {
             confirmButton.backgroundColor = .actionGreen
             teamName.textColor = .actionGreen
             customButton.backgroundColor = .actionGreen
+            points += 1
             self.feedbackBar.spheres[self.team_index].sphere.backgroundColor = .actionGreen
             dismissAlert()
             showInfo()
@@ -223,7 +230,12 @@ class FieldController: UIViewController {
         fieldPresenter.showNamesinField(field: fieldView)
         nextTeamAvailable = true
         timerView.layer.opacity = 0.6
-        customButton.setTitle("Próximo", for: .normal)
+        if team_index < 10 {
+            customButton.setTitle("Próximo", for: .normal)
+        } else {
+            isLast = true
+            customButton.setTitle("Terminar", for: .normal)
+        }
     }
     
     func secondsToMinutedSeconds(seconds: Int) -> (Int, Int) {

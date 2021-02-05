@@ -162,12 +162,12 @@ class FieldView: UIView {
             goalkeeper.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 50),
             
             centerBack.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            centerBack.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -30),
+            centerBack.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -25),
             
-            leftBack.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: -60),
+            leftBack.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: -55),
             leftBack.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -30),
             
-            rightBack.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 60),
+            rightBack.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 55),
             rightBack.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -30),
             
             leftWingBack.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: -120),
@@ -197,11 +197,11 @@ class FieldView: UIView {
             secondStriker.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             secondStriker.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -180),
             
-            leftCenterForward.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: -40),
-            leftCenterForward.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -225),
+            leftCenterForward.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: -30),
+            leftCenterForward.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -235),
             
-            rightCenterForward.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 40),
-            rightCenterForward.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -225),
+            rightCenterForward.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 30),
+            rightCenterForward.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -235),
         ])
     }
 }
