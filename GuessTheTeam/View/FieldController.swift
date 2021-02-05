@@ -152,7 +152,7 @@ class FieldController: UIViewController {
             teamName.text = teams[team_index].name!
             timerCounting = true
             timerView.isHidden = false
-            count = 30
+            count = 45
             timerView.text = "       0:\(count)"
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
             customButton.setTitle("Tentar", for: .normal)

@@ -1,5 +1,76 @@
 [
     {
+        "name": "Borussia Dortmund",
+        "players": [
+            {
+                "name": "Burki",
+                "function": "GoalKeeper",
+                "club": "Borussia Dortmund",
+                "nationality": "switzerland"
+            },
+            {
+                "name": "Hummels",
+                "function": "Left Back",
+                "club": "Borussia Dortmund",
+                "nationality": "germany"
+            },
+            {
+                "name": "Akanji",
+                "function": "Right Back",
+                "club": "Borussia Dortmund",
+                "nationality": "switzerland"
+            },
+            {
+                "name": "Guerreiro",
+                "function": "Left WingBack",
+                "club": "Borussia Dortmund",
+                "nationality": "portugal"
+            },
+            {
+                "name": "Meunier",
+                "function": "Right WingBack",
+                "club": "Borussia Dortmund",
+                "nationality": "belgium"
+            },
+            {
+                "name": "Delaney",
+                "function": "LeftCenter Midfielder",
+                "club": "Borussia Dortmund",
+                "nationality": "denmark"
+            },
+            {
+                "name": "Emre Can",
+                "function": "RightCenter Midfielder",
+                "club": "Borussia Dortmund",
+                "nationality": "germany"
+            },
+            {
+                "name": "Marco Reus",
+                "function": "Second Striker",
+                "club": "Borussia Dortmund",
+                "nationality": "germany"
+            },
+            {
+                "name": "Brandt",
+                "function": "Left Wing",
+                "club": "Borussia Dortmund",
+                "nationality": "germany"
+            },
+            {
+                "name": "Sancho",
+                "function": "Right Wing",
+                "club": "Borussia Dortmund",
+                "nationality": "england"
+            },
+            {
+                "name": "Haaland",
+                "function": "Striker",
+                "club": "Borussia Dortmund",
+                "nationality": "norway"
+            }
+        ]
+    },
+    {
         "name": "Barcelona",
         "players": [
             {
