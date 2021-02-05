@@ -26,6 +26,7 @@ class FieldController: UIViewController {
         self.hideKeyboardWhenTappedAround() 
         teams = fieldPresenter.readTeams()
         print(teams[team_index].name!)
+        print(teams.count)
     }
     
     required init?(coder: NSCoder) {

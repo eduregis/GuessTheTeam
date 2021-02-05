@@ -1,5 +1,76 @@
 [
     {
+        "name": "Internazionale",
+        "players": [
+            {
+                "name": "Mendy",
+                "function": "GoalKeeper",
+                "club": "Internazionale",
+                "nationality": "slovenia"
+            },
+            {
+                "name": "De Vrij",
+                "function": "Center Back",
+                "club": "Internazionale",
+                "nationality": "netherlands"
+            },
+            {
+                "name": "Bastoni",
+                "function": "Left Back",
+                "club": "Internazionale",
+                "nationality": "italy"
+            },
+            {
+                "name": "Skriniar",
+                "function": "Right Back",
+                "club": "Internazionale",
+                "nationality": "slovakia"
+            },
+            {
+                "name": "Young",
+                "function": "Left WingBack",
+                "club": "Internazionale",
+                "nationality": "england"
+            },
+            {
+                "name": "Hakimi",
+                "function": "Right WingBack",
+                "club": "Internazionale",
+                "nationality": "morocco"
+            },
+            {
+                "name": "Vidal",
+                "function": "LeftCenter Midfielder",
+                "club": "Internazionale",
+                "nationality": "chile"
+            },
+            {
+                "name": "Barella",
+                "function": "RightCenter Midfielder",
+                "club": "Internazionale",
+                "nationality": "italy"
+            },
+            {
+                "name": "Brozovic",
+                "function": "Midfielder",
+                "club": "Internazionale",
+                "nationality": "croatia"
+            },
+            {
+                "name": "Martinez",
+                "function": "LeftCenter Forward",
+                "club": "Internazionale",
+                "nationality": "argentina"
+            },
+            {
+                "name": "Lukaku",
+                "function": "RightCenter Forward",
+                "club": "Internazionale",
+                "nationality": "belgium"
+            }
+        ]
+    },
+    {
         "name": "Chelsea",
         "players": [
             {

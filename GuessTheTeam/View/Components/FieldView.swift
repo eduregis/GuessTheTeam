@@ -162,12 +162,12 @@ class FieldView: UIView {
             goalkeeper.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 50),
             
             centerBack.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            centerBack.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -30),
+            centerBack.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -25),
             
-            leftBack.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: -45),
+            leftBack.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: -55),
             leftBack.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -30),
             
-            rightBack.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 45),
+            rightBack.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 55),
             rightBack.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -30),
             
             leftWingBack.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: -120),
