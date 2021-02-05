@@ -197,11 +197,11 @@ class FieldView: UIView {
             secondStriker.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             secondStriker.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -180),
             
-            leftCenterForward.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: -40),
-            leftCenterForward.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -225),
+            leftCenterForward.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: -30),
+            leftCenterForward.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -235),
             
-            rightCenterForward.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 40),
-            rightCenterForward.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -225),
+            rightCenterForward.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 30),
+            rightCenterForward.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -235),
         ])
     }
 }

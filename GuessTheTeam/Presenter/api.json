@@ -1,5 +1,502 @@
 [
     {
+        "name": "River Plate",
+        "players": [
+            {
+                "name": "Armani",
+                "function": "GoalKeeper",
+                "club": "River Plate",
+                "nationality": "argentina"
+            },
+            {
+                "name": "J. Pinola",
+                "function": "Left Back",
+                "club": "River Plate",
+                "nationality": "argentina"
+            },
+            {
+                "name": "R. Rojas",
+                "function": "Center Back",
+                "club": "River Plate",
+                "nationality": "paraguay"
+            },
+            {
+                "name": "P. Díaz",
+                "function": "Right Back",
+                "club": "River Plate",
+                "nationality": "chile"
+            },
+            {
+                "name": "E. Pérez",
+                "function": "Midfielder",
+                "club": "River Plate",
+                "nationality": "argentina"
+            },
+            {
+                "name": "Angileri",
+                "function": "Left WingBack",
+                "club": "River Plate",
+                "nationality": "argentina"
+            },
+            {
+                "name": "Montiel",
+                "function": "Right WingBack",
+                "club": "River Plate",
+                "nationality": "argentina"
+            },
+            {
+                "name": "De La Cruz",
+                "function": "LeftCenter Midfielder",
+                "club": "River Plate",
+                "nationality": "uruguay"
+            },
+            {
+                "name": "Fernández",
+                "function": "RightCenter Midfielder",
+                "club": "River Plate",
+                "nationality": "argentina"
+            },
+            {
+                "name": "Borré",
+                "function": "LeftCenter Forward",
+                "club": "River Plate",
+                "nationality": "colombia"
+            },
+            {
+                "name": "M. Suárez",
+                "function": "RightCenter Forward",
+                "club": "River Plate",
+                "nationality": "argentina"
+            }
+        ]
+    },
+    {
+        "name": "Flamengo",
+        "players": [
+            {
+                "name": "Diego Alves",
+                "function": "GoalKeeper",
+                "club": "Flamengo",
+                "nationality": "brazil"
+            },
+            {
+                "name": "G. Henrique",
+                "function": "Left Back",
+                "club": "Flamengo",
+                "nationality": "brazil"
+            },
+            {
+                "name": "Willian Arão",
+                "function": "Right Back",
+                "club": "Flamengo",
+                "nationality": "brazil"
+            },
+            {
+                "name": "F. Luís",
+                "function": "Left WingBack",
+                "club": "Flamengo",
+                "nationality": "brazil"
+            },
+            {
+                "name": "M. Isla",
+                "function": "Right WingBack",
+                "club": "Flamengo",
+                "nationality": "chile"
+            },
+            {
+                "name": "Diego Ribas",
+                "function": "LeftCenter Midfielder",
+                "club": "Flamengo",
+                "nationality": "brazil"
+            },
+            {
+                "name": "Gerson",
+                "function": "RightCenter Midfielder",
+                "club": "Flamengo",
+                "nationality": "brazil"
+            },
+            {
+                "name": "De Arrascaeta",
+                "function": "Left Wing",
+                "club": "Flamengo",
+                "nationality": "uruguay"
+            },
+            {
+                "name": "B. Henrique",
+                "function": "LeftCenter Forward",
+                "club": "Flamengo",
+                "nationality": "brazil"
+            },
+            {
+                "name": "Gabriel B.",
+                "function": "RightCenter Forward",
+                "club": "Flamengo",
+                "nationality": "brazil"
+            },
+            {
+                "name": "E. Ribeiro",
+                "function": "Right Wing",
+                "club": "Flamengo",
+                "nationality": "brazil"
+            }
+        ]
+    },
+    {
+        "name": "Ajax",
+        "players": [
+            {
+                "name": "Onana",
+                "function": "GoalKeeper",
+                "club": "Ajax",
+                "nationality": "cameroon"
+            },
+            {
+                "name": "Blind",
+                "function": "Left Back",
+                "club": "Ajax",
+                "nationality": "netherlands"
+            },
+            {
+                "name": "P. Schuurs",
+                "function": "Right Back",
+                "club": "Ajax",
+                "nationality": "netherlands"
+            },
+            {
+                "name": "Tagliafico",
+                "function": "Left WingBack",
+                "club": "Ajax",
+                "nationality": "argentina"
+            },
+            {
+                "name": "Mazraoui",
+                "function": "Right WingBack",
+                "club": "Ajax",
+                "nationality": "morocco"
+            },
+            {
+                "name": "M. Kudus",
+                "function": "LeftCenter Midfielder",
+                "club": "Ajax",
+                "nationality": "ghana"
+            },
+            {
+                "name": "E. Álvarez",
+                "function": "RightCenter Midfielder",
+                "club": "Ajax",
+                "nationality": "mexico"
+            },
+            {
+                "name": "Promes",
+                "function": "Midfielder",
+                "club": "Ajax",
+                "nationality": "netherlands"
+            },
+            {
+                "name": "Tadic",
+                "function": "Left Wing",
+                "club": "Ajax",
+                "nationality": "serbia"
+            },
+            {
+                "name": "Labyad",
+                "function": "Striker",
+                "club": "Ajax",
+                "nationality": "morocco"
+            },
+            {
+                "name": "Anthony",
+                "function": "Right Wing",
+                "club": "Ajax",
+                "nationality": "brazil"
+            }
+        ]
+    },
+    {
+        "name": "Bayern Munchen",
+        "players": [
+            {
+                "name": "Neuer",
+                "function": "GoalKeeper",
+                "club": "Bayern Munchen",
+                "nationality": "germany"
+            },
+            {
+                "name": "Alaba",
+                "function": "Left Back",
+                "club": "Bayern Munchen",
+                "nationality": "austria"
+            },
+            {
+                "name": "Boateng",
+                "function": "Right Back",
+                "club": "Bayern Munchen",
+                "nationality": "germany"
+            },
+            {
+                "name": "Süle",
+                "function": "Right WingBack",
+                "club": "Bayern Munchen",
+                "nationality": "germany"
+            },
+            {
+                "name": "Davies",
+                "function": "Left WingBack",
+                "club": "Bayern Munchen",
+                "nationality": "canada"
+            },
+            {
+                "name": "Goretzka",
+                "function": "LeftCenter Midfielder",
+                "club": "Bayern Munchen",
+                "nationality": "germany"
+            },
+            {
+                "name": "Kimmich",
+                "function": "RightCenter Midfielder",
+                "club": "Bayern Munchen",
+                "nationality": "germany"
+            },
+            {
+                "name": "T. Müller",
+                "function": "Second Striker",
+                "club": "Bayern Munchen",
+                "nationality": "germany"
+            },
+            {
+                "name": "Gnabry",
+                "function": "Left Wing",
+                "club": "Bayern Munchen",
+                "nationality": "germany"
+            },
+            {
+                "name": "Lewandowski",
+                "function": "Striker",
+                "club": "Bayern Munchen",
+                "nationality": "republic-of-poland"
+            },
+            {
+                "name": "L. Sané",
+                "function": "Right Wing",
+                "club": "Bayern Munchen",
+                "nationality": "germany"
+            }
+        ]
+    },
+    {
+        "name": "Real Madrid",
+        "players": [
+            {
+                "name": "Courtouis",
+                "function": "GoalKeeper",
+                "club": "Real Madrid",
+                "nationality": "belgium"
+            },
+            {
+                "name": "Varane",
+                "function": "Left Back",
+                "club": "Real Madrid",
+                "nationality": "france"
+            },
+            {
+                "name": "Éder Militão",
+                "function": "Right Back",
+                "club": "Real Madrid",
+                "nationality": "brazil"
+            },
+            {
+                "name": "Mendy",
+                "function": "Right WingBack",
+                "club": "Real Madrid",
+                "nationality": "france"
+            },
+            {
+                "name": "Odriozola",
+                "function": "Left WingBack",
+                "club": "Real Madrid",
+                "nationality": "spain"
+            },
+            {
+                "name": "T. Kroos",
+                "function": "LeftCenter Midfielder",
+                "club": "Real Madrid",
+                "nationality": "germany"
+            },
+            {
+                "name": "L. Módric",
+                "function": "RightCenter Midfielder",
+                "club": "Real Madrid",
+                "nationality": "croatia"
+            },
+            {
+                "name": "Casemiro",
+                "function": "Midfielder",
+                "club": "Real Madrid",
+                "nationality": "brazil"
+            },
+            {
+                "name": "E. Hazard",
+                "function": "Left Wing",
+                "club": "Real Madrid",
+                "nationality": "belgium"
+            },
+            {
+                "name": "K. Benzema",
+                "function": "Striker",
+                "club": "Real Madrid",
+                "nationality": "france"
+            },
+            {
+                "name": "Asensio",
+                "function": "Right Wing",
+                "club": "Real Madrid",
+                "nationality": "spain"
+            }
+        ]
+    },
+    {
+        "name": "Liverpool",
+        "players": [
+            {
+                "name": "Alisson",
+                "function": "GoalKeeper",
+                "club": "Liverpool",
+                "nationality": "brazil"
+            },
+            {
+                "name": "Henderson",
+                "function": "Left Back",
+                "club": "Liverpool",
+                "nationality": "england"
+            },
+            {
+                "name": "Matip",
+                "function": "Right Back",
+                "club": "Liverpool",
+                "nationality": "cameroon"
+            },
+            {
+                "name": "Robertson",
+                "function": "Left WingBack",
+                "club": "Liverpool",
+                "nationality": "scotland"
+            },
+            {
+                "name": "Alexander-Arnold",
+                "function": "Right WingBack",
+                "club": "Liverpool",
+                "nationality": "england"
+            },
+            {
+                "name": "Milner",
+                "function": "LeftCenter Midfielder",
+                "club": "Liverpool",
+                "nationality": "england"
+            },
+            {
+                "name": "Thiago",
+                "function": "RightCenter Midfielder",
+                "club": "Liverpool",
+                "nationality": "spain"
+            },
+            {
+                "name": "Wijnaldum",
+                "function": "Midfielder",
+                "club": "Liverpool",
+                "nationality": "netherlands"
+            },
+            {
+                "name": "S. Mané",
+                "function": "Left Wing",
+                "club": "Liverpool",
+                "nationality": "senegal"
+            },
+            {
+                "name": "R. Firmino",
+                "function": "Striker",
+                "club": "Liverpool",
+                "nationality": "brazil"
+            },
+            {
+                "name": "M. Salah",
+                "function": "Right Wing",
+                "club": "Liverpool",
+                "nationality": "egypt"
+            }
+        ]
+    },
+    {
+        "name": "PSV",
+        "players": [
+            {
+                "name": "Mvogo",
+                "function": "GoalKeeper",
+                "club": "PSV",
+                "nationality": "switzerland"
+            },
+            {
+                "name": "Boscagli",
+                "function": "Left Back",
+                "club": "PSV",
+                "nationality": "france"
+            },
+            {
+                "name": "Teze",
+                "function": "Right Back",
+                "club": "PSV",
+                "nationality": "netherlands"
+            },
+            {
+                "name": "Max",
+                "function": "Left WingBack",
+                "club": "PSV",
+                "nationality": "germany"
+            },
+            {
+                "name": "Dumfries",
+                "function": "Right WingBack",
+                "club": "PSV",
+                "nationality": "netherlands"
+            },
+            {
+                "name": "Rosario",
+                "function": "LeftCenter Midfielder",
+                "club": "PSV",
+                "nationality": "netherlands"
+            },
+            {
+                "name": "Sangare",
+                "function": "RightCenter Midfielder",
+                "club": "PSV",
+                "nationality": "ivory-coast"
+            },
+            {
+                "name": "Gakpo",
+                "function": "Left Wing",
+                "club": "PSV",
+                "nationality": "netherlands"
+            },
+            {
+                "name": "Gotze",
+                "function": "Right Wing",
+                "club": "PSV",
+                "nationality": "germany"
+            },
+            {
+                "name": "Malen",
+                "function": "LeftCenter Forward",
+                "club": "PSV",
+                "nationality": "netherlands"
+            },
+            {
+                "name": "Zahavi",
+                "function": "RightCenter Forward",
+                "club": "PSV",
+                "nationality": "israel"
+            }
+        ]
+    },
+    {
         "name": "Internazionale",
         "players": [
             {

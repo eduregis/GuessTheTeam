@@ -23,6 +23,7 @@
 		2E0A2D4425CC7F3E006D6545 /* DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A2D4325CC7F3E006D6545 /* DismissKeyboard.swift */; };
 		2E0A2D4925CCA128006D6545 /* FeedbackBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A2D4825CCA128006D6545 /* FeedbackBar.swift */; };
 		2E0A2D5425CCA399006D6545 /* FeedbackSphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A2D5325CCA399006D6545 /* FeedbackSphere.swift */; };
+		2E0A2D5F25CD828A006D6545 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A2D5E25CD828A006D6545 /* HomeController.swift */; };
 		2EEE181325CAE5E9003926DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE181225CAE5E9003926DE /* AppDelegate.swift */; };
 		2EEE181525CAE5E9003926DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE181425CAE5E9003926DE /* SceneDelegate.swift */; };
 		2EEE181725CAE5E9003926DE /* FieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE181625CAE5E9003926DE /* FieldController.swift */; };
@@ -67,6 +68,7 @@
 		2E0A2D4325CC7F3E006D6545 /* DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboard.swift; sourceTree = "<group>"; };
 		2E0A2D4825CCA128006D6545 /* FeedbackBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackBar.swift; sourceTree = "<group>"; };
 		2E0A2D5325CCA399006D6545 /* FeedbackSphere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackSphere.swift; sourceTree = "<group>"; };
+		2E0A2D5E25CD828A006D6545 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		2EEE180F25CAE5E9003926DE /* GuessTheTeam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessTheTeam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EEE181225CAE5E9003926DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EEE181425CAE5E9003926DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				2E0A2CE725CB26DC006D6545 /* Components */,
 				2EEE181625CAE5E9003926DE /* FieldController.swift */,
+				2E0A2D5E25CD828A006D6545 /* HomeController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				2E0A2CE025CB1C12006D6545 /* FieldPresenter.swift in Sources */,
 				2E0A2CC425CAEC75006D6545 /* Team+CoreDataClass.swift in Sources */,
 				2EEE181525CAE5E9003926DE /* SceneDelegate.swift in Sources */,
+				2E0A2D5F25CD828A006D6545 /* HomeController.swift in Sources */,
 				2E0A2D5425CCA399006D6545 /* FeedbackSphere.swift in Sources */,
 				2E0A2CE925CB2835006D6545 /* FieldView.swift in Sources */,
 				2E0A2D4425CC7F3E006D6545 /* DismissKeyboard.swift in Sources */,
