@@ -164,10 +164,10 @@ class FieldView: UIView {
             centerBack.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             centerBack.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -30),
             
-            leftBack.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: -60),
+            leftBack.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: -45),
             leftBack.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -30),
             
-            rightBack.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 60),
+            rightBack.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 45),
             rightBack.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -30),
             
             leftWingBack.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: -120),

@@ -1,5 +1,76 @@
 [
     {
+        "name": "Chelsea",
+        "players": [
+            {
+                "name": "Mendy",
+                "function": "GoalKeeper",
+                "club": "Chelsea",
+                "nationality": "senegal"
+            },
+            {
+                "name": "Zouma",
+                "function": "Left Back",
+                "club": "Chelsea",
+                "nationality": "france"
+            },
+            {
+                "name": "Thiago Silva",
+                "function": "Right Back",
+                "club": "Chelsea",
+                "nationality": "brazil"
+            },
+            {
+                "name": "Chilwell",
+                "function": "Left WingBack",
+                "club": "Chelsea",
+                "nationality": "england"
+            },
+            {
+                "name": "James",
+                "function": "Right WingBack",
+                "club": "Chelsea",
+                "nationality": "england"
+            },
+            {
+                "name": "Mount",
+                "function": "LeftCenter Midfielder",
+                "club": "Chelsea",
+                "nationality": "england"
+            },
+            {
+                "name": "Havertz",
+                "function": "RightCenter Midfielder",
+                "club": "Chelsea",
+                "nationality": "germany"
+            },
+            {
+                "name": "Kante",
+                "function": "Midfielder",
+                "club": "Chelsea",
+                "nationality": "france"
+            },
+            {
+                "name": "T. Werner",
+                "function": "Left Wing",
+                "club": "Chelsea",
+                "nationality": "germany"
+            },
+            {
+                "name": "Pulisic",
+                "function": "Right Wing",
+                "club": "Chelsea",
+                "nationality": "united-states-of-america"
+            },
+            {
+                "name": "Anbraham",
+                "function": "Striker",
+                "club": "Chelsea",
+                "nationality": "england"
+            }
+        ]
+    },
+    {
         "name": "Borussia Dortmund",
         "players": [
             {
@@ -178,7 +249,7 @@
                 "name": "Gueye",
                 "function": "LeftCenter Midfielder",
                 "club": "Paris Saint-Germain",
-                "nationality": "ghana"
+                "nationality": "senegal"
             },
             {
                 "name": "Verratti",
