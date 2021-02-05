@@ -12,39 +12,42 @@ class FieldPresenter {
     @Published var apiData = [TeamData]()
     
     init() {
-        removeAllTeams()
         loadTeams()
-        readTeams()
     }
     
     func loadTeams() {
-        print(UserDefaults.standard.bool(forKey: "isNotFirstTime"))
-        if let fileLocation = Bundle.main.path(forResource: "api", ofType: "json") {
-            do {
-                let url = URL(fileURLWithPath: fileLocation)
-                let data = try Data(contentsOf: url)
-                let jsonDecoder = JSONDecoder()
-                let dataFromJSON = try jsonDecoder.decode([TeamData].self, from: data)
-                self.apiData = dataFromJSON
-            } catch {
-                print(error)
-            }
-        }
-        
-        for teamData in self.apiData {
-            if let team = NSEntityDescription.insertNewObject(forEntityName: "Team", into:  DatabaseController.persistentContainer.viewContext) as? Team {
-                team.name = teamData.name
-                for playerData in teamData.players {
-                    if let player = NSEntityDescription.insertNewObject(forEntityName: "Player", into:  DatabaseController.persistentContainer.viewContext) as? Player {
-                        player.name = playerData.name
-                        player.club = playerData.club
-                        player.function = playerData.function
-                        player.nationality = playerData.nationality
-                        team.addToPlayers(player)
-                    }
-                    DatabaseController.saveContext()
+        if !(UserDefaults.standard.bool(forKey: "isNotFirstTime")) {
+            removeAllTeams()
+            UserDefaults.standard.set(0, forKey: "score")
+            UserDefaults.standard.set(0, forKey: "highscore")
+            if let fileLocation = Bundle.main.path(forResource: "api", ofType: "json") {
+                do {
+                    let url = URL(fileURLWithPath: fileLocation)
+                    let data = try Data(contentsOf: url)
+                    let jsonDecoder = JSONDecoder()
+                    let dataFromJSON = try jsonDecoder.decode([TeamData].self, from: data)
+                    self.apiData = dataFromJSON
+                } catch {
+                    print(error)
                 }
             }
+            
+            for teamData in self.apiData {
+                if let team = NSEntityDescription.insertNewObject(forEntityName: "Team", into:  DatabaseController.persistentContainer.viewContext) as? Team {
+                    team.name = teamData.name
+                    for playerData in teamData.players {
+                        if let player = NSEntityDescription.insertNewObject(forEntityName: "Player", into:  DatabaseController.persistentContainer.viewContext) as? Player {
+                            player.name = playerData.name
+                            player.club = playerData.club
+                            player.function = playerData.function
+                            player.nationality = playerData.nationality
+                            team.addToPlayers(player)
+                        }
+                        DatabaseController.saveContext()
+                    }
+                }
+            }
+            UserDefaults.standard.setValue(true, forKey: "isNotFirstTime")
         }
     }
     

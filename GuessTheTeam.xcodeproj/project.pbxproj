@@ -24,6 +24,7 @@
 		2E0A2D4925CCA128006D6545 /* FeedbackBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A2D4825CCA128006D6545 /* FeedbackBar.swift */; };
 		2E0A2D5425CCA399006D6545 /* FeedbackSphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A2D5325CCA399006D6545 /* FeedbackSphere.swift */; };
 		2E0A2D5F25CD828A006D6545 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A2D5E25CD828A006D6545 /* HomeController.swift */; };
+		2E0A2D6A25CD91E7006D6545 /* FeedbackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A2D6925CD91E7006D6545 /* FeedbackController.swift */; };
 		2EEE181325CAE5E9003926DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE181225CAE5E9003926DE /* AppDelegate.swift */; };
 		2EEE181525CAE5E9003926DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE181425CAE5E9003926DE /* SceneDelegate.swift */; };
 		2EEE181725CAE5E9003926DE /* FieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE181625CAE5E9003926DE /* FieldController.swift */; };
@@ -69,6 +70,7 @@
 		2E0A2D4825CCA128006D6545 /* FeedbackBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackBar.swift; sourceTree = "<group>"; };
 		2E0A2D5325CCA399006D6545 /* FeedbackSphere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackSphere.swift; sourceTree = "<group>"; };
 		2E0A2D5E25CD828A006D6545 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		2E0A2D6925CD91E7006D6545 /* FeedbackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackController.swift; sourceTree = "<group>"; };
 		2EEE180F25CAE5E9003926DE /* GuessTheTeam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessTheTeam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EEE181225CAE5E9003926DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EEE181425CAE5E9003926DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				2E0A2CE725CB26DC006D6545 /* Components */,
 				2EEE181625CAE5E9003926DE /* FieldController.swift */,
 				2E0A2D5E25CD828A006D6545 /* HomeController.swift */,
+				2E0A2D6925CD91E7006D6545 /* FeedbackController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				2E0A2CC525CAEC75006D6545 /* Team+CoreDataProperties.swift in Sources */,
 				2E0A2D3C25CC712E006D6545 /* ShakeView.swift in Sources */,
 				2E0A2CF125CB2E5E006D6545 /* PlayerView.swift in Sources */,
+				2E0A2D6A25CD91E7006D6545 /* FeedbackController.swift in Sources */,
 				2E0A2CC325CAEC75006D6545 /* Player+CoreDataProperties.swift in Sources */,
 				2E0A2D4925CCA128006D6545 /* FeedbackBar.swift in Sources */,
 				2EEE181725CAE5E9003926DE /* FieldController.swift in Sources */,

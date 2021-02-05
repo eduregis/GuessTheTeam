@@ -22,12 +22,14 @@ class FieldController: UIViewController {
     
     init() {
         self.fieldPresenter = FieldPresenter()
+        teams = fieldPresenter.readTeams()
         super.init(nibName: nil, bundle: nil)
         configureLayout()
         self.view.backgroundColor = UIColor.backgroundPurple
-        self.hideKeyboardWhenTappedAround() 
-        teams = fieldPresenter.readTeams()
-//        teams = teams.shuffled()
+        self.hideKeyboardWhenTappedAround()
+        print(teams.count)
+        customButton.addTarget(self, action: #selector(mainButton), for: .touchUpInside)
+        teams = teams.shuffled()
     }
     
     required init?(coder: NSCoder) {
@@ -75,7 +77,6 @@ class FieldController: UIViewController {
         button.setTitle("Iniciar", for: .normal)
         button.titleLabel?.font = UIFont(name: "Righteous-Regular", size: 24)
         button.setTitleColor(.backgroundPurple, for: .normal)
-        button.addTarget(self, action: #selector(mainButton), for: .touchUpInside)
         self.view.addSubview(button)
         return button
     }()
@@ -129,7 +130,9 @@ class FieldController: UIViewController {
     
     @objc func mainButton() {
         if isLast {
-            // IR PARA A TELA DE CONCLUSÃO
+            let feedBackController = FeedbackController()
+            feedBackController.modalPresentationStyle = .fullScreen
+            present(feedBackController, animated: true, completion: nil)
         } else {
             if nextTeamAvailable {
                 fieldPresenter.hidePlayersinField(field: fieldView)
@@ -172,7 +175,7 @@ class FieldController: UIViewController {
     }
     
     @objc func confirmName() {
-        if textField.text?.lowercased().trimmingCharacters(in: .whitespaces) == teams[team_index].name!.lowercased().trimmingCharacters(in: .whitespaces) {
+        if textField.text?.lowercased().trimmingCharacters(in: .whitespaces).folding(options: .diacriticInsensitive, locale: .current) == teams[team_index].name!.lowercased().trimmingCharacters(in: .whitespaces).folding(options: .diacriticInsensitive, locale: .current) {
             textField.layer.borderColor = UIColor.actionGreen.cgColor
             textField.textColor = .actionGreen
             textField.tintColor = .actionGreen
@@ -230,10 +233,15 @@ class FieldController: UIViewController {
         fieldPresenter.showNamesinField(field: fieldView)
         nextTeamAvailable = true
         timerView.layer.opacity = 0.6
-        if team_index < 10 {
+        print(team_index)
+        if team_index < 9 {
             customButton.setTitle("Próximo", for: .normal)
         } else {
             isLast = true
+            UserDefaults.standard.set(points, forKey: "score")
+            if UserDefaults.standard.integer(forKey: "highscore") < points {
+                UserDefaults.standard.set(points, forKey: "highscore")
+            }
             customButton.setTitle("Terminar", for: .normal)
         }
     }

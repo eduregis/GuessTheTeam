@@ -5,10 +5,7 @@
 //  Created by Eduardo Oliveira on 05/02/21.
 //
 
-import Foundation
-
 import UIKit
-import CoreData
 
 class HomeController: UIViewController {
     init() {
