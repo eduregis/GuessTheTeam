@@ -29,5 +29,111 @@ class GuessTheTeamTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    // TESTS IN VIEWCODE CONTROLLERS
+    
+    func testFieldView() throws {
+        // given
+        let fieldController = FieldController()
+        let fieldView = FieldView()
+        // when
+        XCTAssert(type(of: fieldController.fieldView) == type(of: fieldView))
+    }
+    
+    func testFeedbackView() throws {
+        // given
+        let feedbackController = FeedbackController()
+        let label = UILabel()
+        // when
+        XCTAssert(type(of: feedbackController.highscoreLabel) == type(of: label))
+    }
+    
+    func testHomeView() throws {
+        // given
+        let homeController = HomeController()
+        let button = UIButton()
+        // when
+        XCTAssert(type(of: homeController.customButton) == type(of: button))
+    }
 
+    // TEST IN FUNCTIONS
+    
+    func testSecondsToMinutedSeconds() {
+        // given
+        let fieldController = FieldController()
+        let input = 301
+        // when
+        let output = fieldController.secondsToMinutedSeconds(seconds: input)
+        // then
+        XCTAssertEqual(output.0, 5)
+        XCTAssertEqual(output.1, 1)
+    }
+    
+    func testMakeTimeString() {
+        // given
+        let fieldController = FieldController()
+        let inputMinutes = 2
+        let inputSeconds = 30
+        // when
+        let output = fieldController.makeTimeString(minutes: inputMinutes, seconds: inputSeconds)
+        // then
+        XCTAssertEqual(output, "       2:30")
+    }
+    
+    func testFieldView_mainButton() {
+        // given
+        let fieldController = FieldController()
+        // when
+        let mainButton = fieldController.mainButton()
+        // then
+        XCTAssert(mainButton)
+    }
+    
+    func testFieldView_confirmName() {
+        // given
+        let fieldController = FieldController()
+        // when
+        let confirmName = fieldController.confirmName()
+        // then
+        XCTAssert(confirmName)
+    }
+    
+    func testFieldView_showInfo() {
+        // given
+        let fieldController = FieldController()
+        // when
+        let showInfo = fieldController.showInfo()
+        // then
+        XCTAssert(showInfo)
+    }
+    
+    func testFieldView_dismissAlert() {
+        // given
+        let fieldController = FieldController()
+        // when
+        let dismissAlert = fieldController.dismissAlert()
+        // then
+        XCTAssert(dismissAlert)
+    }
+    
+    func testFieldView_timerCounter() {
+        // given
+        let fieldController = FieldController()
+        // when
+        let timerCounter = fieldController.timerCounter()
+        // then
+        XCTAssert(timerCounter)
+    }
+    
+    // TESTS IN EXTENSIONS
+    
+    func testShake()  {
+        //given
+        let view = UIView()
+        var thrownError: Error?
+        // when
+        XCTAssertThrowsError(try view.shake(count: 0, for: 0.5, withTranslation: 2)) {
+            thrownError = $0
+        }
+    }
 }
