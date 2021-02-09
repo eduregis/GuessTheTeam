@@ -128,7 +128,7 @@ class FieldController: UIViewController {
         return feedbackBar
     }()
     
-    @objc func mainButton() {
+    @discardableResult @objc func mainButton() -> Bool {
         if isLast {
             let feedBackController = FeedbackController()
             feedBackController.modalPresentationStyle = .fullScreen
@@ -172,9 +172,10 @@ class FieldController: UIViewController {
                 })
             }
         }
+        return true
     }
     
-    @objc func confirmName() {
+    @discardableResult @objc func confirmName() -> Bool {
         if textField.text?.lowercased().trimmingCharacters(in: .whitespaces).folding(options: .diacriticInsensitive, locale: .current) == teams[team_index].name!.lowercased().trimmingCharacters(in: .whitespaces).folding(options: .diacriticInsensitive, locale: .current) {
             textField.layer.borderColor = UIColor.actionGreen.cgColor
             textField.textColor = .actionGreen
@@ -186,17 +187,24 @@ class FieldController: UIViewController {
             self.feedbackBar.spheres[self.team_index].sphere.backgroundColor = .actionGreen
             dismissAlert()
             showInfo()
+            return true
         } else {
             textField.layer.borderColor = UIColor.actionRed.cgColor
             textField.textColor = .actionRed
             textField.tintColor = .actionRed
             confirmButton.backgroundColor = .actionRed
-            textField.shake(count: 4, for: 0.2, withTranslation: 3)
-            confirmButton.shake(count: 4, for: 0.2, withTranslation: 3)
+            do {
+                try textField.shake(count: 4, for: 0.2, withTranslation: 3)
+                try confirmButton.shake(count: 4, for: 0.2, withTranslation: 3)
+            } catch {
+                return false
+            }
+            return true
         }
+        
     }
     
-    @objc func timerCounter() -> Void {
+    @discardableResult @objc func timerCounter() -> Bool {
         if count > 1 {
             count = count - 1
             let time = secondsToMinutedSeconds(seconds: count)
@@ -210,9 +218,10 @@ class FieldController: UIViewController {
             self.feedbackBar.spheres[self.team_index].sphere.backgroundColor = .actionRed
             timerView.text = "       0:00"
         }
+        return true
     }
     
-    @objc func dismissAlert() {
+    @discardableResult @objc func dismissAlert() -> Bool {
         UIView.animate(withDuration: 0.4, delay: 0, options:[.curveEaseInOut], animations: {
             self.dimmingOverlay.layer.opacity = 0
             self.textField.layer.opacity = 0
@@ -224,9 +233,10 @@ class FieldController: UIViewController {
             self.textField.tintColor = .actionBlue
             self.confirmButton.backgroundColor = .actionBlue
         }
+        return true
     }
     
-    func showInfo() {
+    @discardableResult func showInfo() -> Bool {
         timerCounting = false
         timer.invalidate()
         teamName.isHidden = false
@@ -244,6 +254,7 @@ class FieldController: UIViewController {
             }
             customButton.setTitle("Terminar", for: .normal)
         }
+        return true
     }
     
     func secondsToMinutedSeconds(seconds: Int) -> (Int, Int) {
