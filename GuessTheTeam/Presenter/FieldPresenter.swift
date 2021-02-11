@@ -20,6 +20,7 @@ class FieldPresenter {
             removeAllTeams()
             UserDefaults.standard.set(0, forKey: "score")
             UserDefaults.standard.set(0, forKey: "highscore")
+            
             if let fileLocation = Bundle.main.path(forResource: "api", ofType: "json") {
                 do {
                     let url = URL(fileURLWithPath: fileLocation)
