@@ -18,7 +18,6 @@
 		2E0A2CF125CB2E5E006D6545 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A2CF025CB2E5E006D6545 /* PlayerView.swift */; };
 		2E0A2CF625CB543F006D6545 /* DataCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A2CF525CB543F006D6545 /* DataCodable.swift */; };
 		2E0A2D0D25CB5F11006D6545 /* api.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E0A2D0C25CB5F11006D6545 /* api.json */; };
-		2E0A2D3025CC28E4006D6545 /* Righteous-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E0A2D2F25CC28E4006D6545 /* Righteous-Regular.ttf */; };
 		2E0A2D3C25CC712E006D6545 /* ShakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A2D3B25CC712E006D6545 /* ShakeView.swift */; };
 		2E0A2D4425CC7F3E006D6545 /* DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A2D4325CC7F3E006D6545 /* DismissKeyboard.swift */; };
 		2E0A2D4925CCA128006D6545 /* FeedbackBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A2D4825CCA128006D6545 /* FeedbackBar.swift */; };
@@ -33,6 +32,9 @@
 		2EEE182D25CAE5EA003926DE /* GuessTheTeamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE182C25CAE5EA003926DE /* GuessTheTeamTests.swift */; };
 		2EEE183825CAE5EA003926DE /* GuessTheTeamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE183725CAE5EA003926DE /* GuessTheTeamUITests.swift */; };
 		2EEE184D25CAE872003926DE /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE184C25CAE872003926DE /* CustomColors.swift */; };
+		2EFF783325D5651A00EAAF95 /* Righteous-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2EFF783225D5651A00EAAF95 /* Righteous-Regular.ttf */; };
+		2EFF783425D5651A00EAAF95 /* Righteous-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2EFF783225D5651A00EAAF95 /* Righteous-Regular.ttf */; };
+		2EFF783525D5651A00EAAF95 /* Righteous-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2EFF783225D5651A00EAAF95 /* Righteous-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +66,6 @@
 		2E0A2CF525CB543F006D6545 /* DataCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCodable.swift; sourceTree = "<group>"; };
 		2E0A2D0C25CB5F11006D6545 /* api.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = api.json; sourceTree = "<group>"; };
 		2E0A2D1925CC2341006D6545 /* Righteous-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Righteous-Regular.ttf"; path = "../../../../Downloads/Righteous/Righteous-Regular.ttf"; sourceTree = "<group>"; };
-		2E0A2D2F25CC28E4006D6545 /* Righteous-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Righteous-Regular.ttf"; path = "../../../../Downloads/Righteous/Righteous-Regular.ttf"; sourceTree = "<group>"; };
 		2E0A2D3B25CC712E006D6545 /* ShakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeView.swift; sourceTree = "<group>"; };
 		2E0A2D4325CC7F3E006D6545 /* DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboard.swift; sourceTree = "<group>"; };
 		2E0A2D4825CCA128006D6545 /* FeedbackBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackBar.swift; sourceTree = "<group>"; };
@@ -86,6 +87,7 @@
 		2EEE183725CAE5EA003926DE /* GuessTheTeamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheTeamUITests.swift; sourceTree = "<group>"; };
 		2EEE183925CAE5EA003926DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EEE184C25CAE872003926DE /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
+		2EFF783225D5651A00EAAF95 /* Righteous-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Righteous-Regular.ttf"; path = "../../../../Downloads/Righteous/Righteous-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,14 +167,6 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		2E0A2D1D25CC27B6006D6545 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				2E0A2D2F25CC28E4006D6545 /* Righteous-Regular.ttf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
 		2E0A2D3A25CC711A006D6545 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,8 +200,8 @@
 		2EEE181125CAE5E9003926DE /* GuessTheTeam */ = {
 			isa = PBXGroup;
 			children = (
+				2EFF783125D5650200EAAF95 /* Fonts */,
 				2E0A2D3A25CC711A006D6545 /* Extensions */,
-				2E0A2D1D25CC27B6006D6545 /* Fonts */,
 				2E0A2CDB25CB1B50006D6545 /* Database */,
 				2E0A2CDA25CB1B39006D6545 /* Presenter */,
 				2E0A2CD925CB1B31006D6545 /* View */,
@@ -246,6 +240,14 @@
 				2EEE181E25CAE5EA003926DE /* Assets.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		2EFF783125D5650200EAAF95 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2EFF783225D5651A00EAAF95 /* Righteous-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,7 +355,7 @@
 			files = (
 				2E0A2CCC25CAECA1006D6545 /* GuessTheTeam.xcdatamodeld in Resources */,
 				2EEE182225CAE5EA003926DE /* LaunchScreen.storyboard in Resources */,
-				2E0A2D3025CC28E4006D6545 /* Righteous-Regular.ttf in Resources */,
+				2EFF783325D5651A00EAAF95 /* Righteous-Regular.ttf in Resources */,
 				2E0A2D0D25CB5F11006D6545 /* api.json in Resources */,
 				2EEE181F25CAE5EA003926DE /* Assets.xcassets in Resources */,
 			);
@@ -363,6 +365,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EFF783425D5651A00EAAF95 /* Righteous-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +373,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EFF783525D5651A00EAAF95 /* Righteous-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

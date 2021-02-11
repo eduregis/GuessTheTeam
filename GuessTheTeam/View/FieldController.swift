@@ -27,7 +27,6 @@ class FieldController: UIViewController {
         configureLayout()
         self.view.backgroundColor = UIColor.backgroundPurple
         self.hideKeyboardWhenTappedAround()
-        print(teams.count)
         customButton.addTarget(self, action: #selector(mainButton), for: .touchUpInside)
         teams = teams.shuffled()
     }
@@ -138,7 +137,6 @@ class FieldController: UIViewController {
                 fieldPresenter.hidePlayersinField(field: fieldView)
                 team_index += 1
                 teams = fieldPresenter.readTeams()
-                print(teams[team_index].name!)
                 teamName.isHidden = true
                 nextTeamAvailable = false
                 teamName.textColor = .actionBlue
@@ -243,7 +241,6 @@ class FieldController: UIViewController {
         fieldPresenter.showNamesinField(field: fieldView)
         nextTeamAvailable = true
         timerView.layer.opacity = 0.6
-        print(team_index)
         if team_index < 9 {
             customButton.setTitle("Próximo", for: .normal)
         } else {
