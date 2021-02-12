@@ -87,6 +87,7 @@ class FieldController: UIViewController {
         button.backgroundColor = .actionBlue
         button.layer.cornerRadius = 10
         button.setTitle("Ok", for: .normal)
+        button.layer.opacity = 0
         button.titleLabel?.font = UIFont(name: "Righteous-Regular", size: 24)
         button.setTitleColor(.backgroundPurple, for: .normal)
         self.view.addSubview(button)
