@@ -12,7 +12,7 @@ class FieldPresenter {
     @Published var apiData = [TeamData]()
     
     init() {
-        loadTeams()
+//        loadTeams()
     }
     
     func loadTeams() {
