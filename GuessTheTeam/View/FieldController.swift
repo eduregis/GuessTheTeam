@@ -22,18 +22,76 @@ class FieldController: UIViewController {
     
     init() {
         self.fieldPresenter = FieldPresenter()
-        teams = fieldPresenter.readTeams()
         super.init(nibName: nil, bundle: nil)
         configureLayout()
+        if !(UserDefaults.standard.bool(forKey: "isNotFirstTime")) {
+            UIView.animate(withDuration: 0.4, delay: 0.5, options:[.curveEaseInOut], animations: {
+                self.initialBoardDimmingOverlay.layer.opacity = 0.6
+                self.initialBoard.layer.opacity = 1
+                self.initialBoardText.layer.opacity = 1
+                self.initialBoardButton.layer.opacity = 1
+                self.customButton.layer.opacity = 0
+            })
+        }
+        fieldPresenter.loadTeams()
+        teams = fieldPresenter.readTeams()
         self.view.backgroundColor = UIColor.backgroundPurple
         self.hideKeyboardWhenTappedAround()
         customButton.addTarget(self, action: #selector(mainButton), for: .touchUpInside)
+        initialBoardButton.addTarget(self, action: #selector(initialBoardButtonAction), for: .touchUpInside)
         teams = teams.shuffled()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    lazy var initialBoard: UIView = {
+       let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.borderWidth = 5
+        view.layer.borderColor = UIColor.actionBlue.cgColor
+        view.layer.cornerRadius = 10
+        view.backgroundColor = .backgroundPurple
+        view.layer.opacity = 0
+        self.view.addSubview(view)
+        return view
+    }()
+    
+    lazy var initialBoardDimmingOverlay: UIButton = {
+        let dim = UIButton()
+        dim.translatesAutoresizingMaskIntoConstraints = false
+        dim.backgroundColor = .black
+        dim.layer.opacity = 0
+        dim.addTarget(self, action: #selector(self.dismissAlert), for: .touchUpInside)
+        self.view.addSubview(dim)
+        return dim
+    }()
+    
+    lazy var initialBoardText: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .actionBlue
+        label.font = UIFont.systemFont(ofSize: 17)
+        label.text = "Olá, bem vindo ao Guess The Team! \n\n Nesse quiz, serão mostradas as escalações de alguns times com as nacionalidades dos seus jogadores representadas com bandeiras. Você terá 45 segundos para tentar adivinhar que time é esse. Quantos você consegue acertar?"
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.layer.opacity = 0
+        self.view.addSubview(label)
+        return label
+    }()
+    
+    lazy var initialBoardButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = .actionBlue
+        button.layer.cornerRadius = 10
+        button.setTitle("Ok", for: .normal)
+        button.titleLabel?.font = UIFont(name: "Righteous-Regular", size: 24)
+        button.setTitleColor(.backgroundPurple, for: .normal)
+        self.view.addSubview(button)
+        return button
+    }()
     
     lazy var timerView: UILabel = {
         let label = UILabel()
@@ -126,6 +184,17 @@ class FieldController: UIViewController {
         self.view.addSubview(feedbackBar)
         return feedbackBar
     }()
+    
+    @discardableResult @objc func initialBoardButtonAction() -> Bool {
+        UIView.animate(withDuration: 0.4, delay: 0, options:[.curveEaseInOut], animations: {
+            self.initialBoardDimmingOverlay.layer.opacity = 0
+            self.initialBoardText.layer.opacity = 0
+            self.initialBoard.layer.opacity = 0
+            self.initialBoardButton.layer.opacity = 0
+            self.customButton.layer.opacity = 1
+        })
+        return true
+    }
     
     @discardableResult @objc func mainButton() -> Bool {
         if isLast {
@@ -304,6 +373,25 @@ class FieldController: UIViewController {
             confirmButton.widthAnchor.constraint(equalToConstant: 50),
             confirmButton.heightAnchor.constraint(equalToConstant: 50),
             
+            initialBoardDimmingOverlay.leftAnchor.constraint(equalTo: self.view.leftAnchor),
+            initialBoardDimmingOverlay.rightAnchor.constraint(equalTo: self.view.rightAnchor),
+            initialBoardDimmingOverlay.topAnchor.constraint(equalTo: self.view.topAnchor),
+            initialBoardDimmingOverlay.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            
+            initialBoard.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            initialBoard.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+            initialBoard.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.7),
+            initialBoard.heightAnchor.constraint(equalToConstant: 400),
+            
+            initialBoardText.centerXAnchor.constraint(equalTo: initialBoard.centerXAnchor),
+            initialBoardText.topAnchor.constraint(equalTo: initialBoard.topAnchor, constant: 10),
+            initialBoardText.widthAnchor.constraint(equalTo: initialBoard.widthAnchor, multiplier: 0.9),
+            initialBoardText.heightAnchor.constraint(equalToConstant: 300),
+            
+            initialBoardButton.centerXAnchor.constraint(equalTo: initialBoard.centerXAnchor),
+            initialBoardButton.bottomAnchor.constraint(equalTo: initialBoard.bottomAnchor, constant: -30),
+            initialBoardButton.widthAnchor.constraint(equalTo: initialBoard.widthAnchor, multiplier: 0.7),
+            initialBoardButton.heightAnchor.constraint(equalToConstant: 59),
         ])
     }
 }
